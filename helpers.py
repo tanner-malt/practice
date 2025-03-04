@@ -47,3 +47,17 @@ def normalize_number(input_val: int) -> str:
         vals = [ending[i:i+3] for i in range(0, len(ending), 3)]
         final = [header] + vals
         return ','.join(final)
+
+'''
+This was original solution to question 3, but i needed to work on this more, then i realized there was a simpler way
+def build_dict_with_target(target: int) -> dict:
+    test = {value: value**2 for value in range(target+1)}
+    print(test)
+    return test
+'''
+
+def build_dict_with_target(target: int) -> dict:
+    new_dict = dict()
+    for i in range(1,target+1):
+        new_dict[i] = i*i
+    return new_dict
