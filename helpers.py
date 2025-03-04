@@ -26,18 +26,24 @@ def compute_factorial(input_val: int):
         input_val -=1
     return base
 
-def normalize_number(input_val: int):
+def normalize_number(input_val: int) -> str:
     '''
-    Definition: This will return a number with commas seperating every 3 places
+    Definition: This will return a number with commas separating every 3 places
 
     Parameters:
     input-> an integer
     '''
-    char_count = len(str(input_val))
+    input_str = str(input_val)
+    char_count = len(input_str)
+    
     if char_count <= 3:
-        return input_val
+        return input_str
     else:
-        leading = len(str(input_val)) % 3
-        header = str(input_val)[:leading]
-        print(header)
-        return header
+        leading = char_count % 3
+        if leading == 0:
+            leading = 3
+        header = input_str[:leading]
+        ending = input_str[leading:]
+        vals = [ending[i:i+3] for i in range(0, len(ending), 3)]
+        final = [header] + vals
+        return ','.join(final)
