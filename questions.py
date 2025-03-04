@@ -58,4 +58,27 @@ def execute_q3():
     val = int(input("Please enter value you wish to build a dictionary with: "))
     print(h.build_dict_with_target(val))
 
-execute_q3()
+#execute_q3()
+
+"""
+Question 4
+Level 1
+
+Question: Write a program which accepts a sequence of comma-separated numbers from console and generate a list and a tuple which contains every number. 
+Suppose the following input is supplied to the program: 34,67,55,33,12,98 Then, the output should be: 
+['34', '67', '55', '33', '12', '98'] ('34', '67', '55', '33', '12', '98')
+
+Hints: In case of input data being supplied to the question, it should be assumed to be a console input. tuple() method can convert list to tuple
+"""
+
+def execute_q4():
+    """
+    Definition: This function will ask for a list of numbers, and generate a list and a tuple which contains every number
+    """
+    comma_list = input("Please enter a list of comma-seperated numbers: ")
+    normalized = comma_list.split(",")
+    tuple_list = tuple(normalized)
+    print(normalized)
+    print(tuple_list)
+
+#execute_q4()
