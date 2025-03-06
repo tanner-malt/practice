@@ -1,3 +1,5 @@
+import math
+
 def divisible7_not5(lower_bound: int, upper_bound: int):
     '''
     Definition: This function will take a lower bound and an upper bound, and will return a list of integers that are divisble by 7, and not by 5.
@@ -57,7 +59,57 @@ def build_dict_with_target(target: int) -> dict:
 '''
 
 def build_dict_with_target(target: int) -> dict:
+    '''
+    Definition: This will build a dictionary with some target integer at least 1. 
+
+    Parameters:
+    target-> an integer
+
+    Return:
+    Will return a dictionary from 1 to the target, for every integer from 1 to the target it will create a key of that integer, with the value being
+    the key squared. 
+    '''
     new_dict = dict()
     for i in range(1,target+1):
         new_dict[i] = i*i
     return new_dict
+
+def solve_q6_formula(csl: list):
+    '''
+    Definition: This will plug into the formula presented by question 6 and return the solution
+
+    Parameters:
+    csl-> a list of integers
+
+    Returns:
+    will give a list for every integer in the provided list
+    '''
+    c = 50 
+    h = 30
+    return_list = []
+ 
+
+    for val in csl:
+        return_list.append(round(math.sqrt(2 * c * val/h)))
+
+    return return_list
+
+def two_digits_to_iTimejArray(i, j):
+    '''
+    Definition: This will take two digits, and return an array that has i * j for the ith and jth positions
+
+    Parameters:
+    ijList-> a list of two integers
+
+    Returns:
+    a 2D-array that has i * j for the ith and jth positions
+    '''
+    rows, cols = i , j
+    array_2d = [[0 for _ in range(cols)] for _ in range(rows)]
+
+    print(array_2d)
+    for ele in range(i):
+        for val in range(j):
+            array_2d[ele][val] = ele * val
+
+    print(array_2d)
