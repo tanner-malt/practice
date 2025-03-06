@@ -148,3 +148,21 @@ def execute_q7():
     h.two_digits_to_iTimejArray(int(i), int(j))
 
 #execute_q7()
+
+"""
+Question 8
+Level 2
+
+Question: 
+Write a program that accepts a comma separated sequence of words as input and prints the words in a comma-separated sequence after sorting them alphabetically.
+ Suppose the following input is supplied to the program: without,hello,bag,world Then, the output should be: bag,hello,without,world
+
+Hints: In case of input data being supplied to the question, it should be assumed to be a console input.
+"""
+def execute_q8():
+    input_str = input("Please Enter Comma seperated words: (spaces count!)")
+    input_list =input_str.split(",")
+    input_list.sort()
+    print(','.join(input_list))
+
+#execute_q8()
