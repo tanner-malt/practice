@@ -166,3 +166,36 @@ def execute_q8():
     print(','.join(input_list))
 
 #execute_q8()
+
+"""
+Question 9
+Level 2
+
+Question£º Write a program that accepts sequence of lines as input and prints the lines after making all characters in the sentence capitalized. 
+Suppose the following input is supplied to the program: Hello world Practice makes perfect Then, 
+the output should be: HELLO WORLD PRACTICE MAKES PERFECT
+
+Hints: In case of input data being supplied to the question, it should be assumed to be a console input.
+"""
+
+def execute_q9():
+    input_str = input("Please Enter a Sentence: ")
+    uppered_str = []
+    for char in input_str:
+        char.upper()
+        uppered_str.append(char.upper())
+    uppered_str = "".join(uppered_str)
+    print(uppered_str)
+
+#execute_q9()
+
+"""
+Level 2
+
+Question: Write a program that accepts a sequence of whitespace separated words as input and prints the words after removing all duplicate words 
+and sorting them alphanumerically. Suppose the following input is supplied to the program: hello world and practice makes perfect and 
+hello world again Then, the output should be: again and hello makes perfect practice world
+
+Hints: In case of input data being supplied to the question, it should be assumed to be a console input. 
+We use set container to remove duplicated data automatically and then use sorted() to sort the data.
+"""
