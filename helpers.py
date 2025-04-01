@@ -113,3 +113,16 @@ def two_digits_to_iTimejArray(i, j):
             array_2d[ele][val] = ele * val
 
     print(array_2d)
+
+def split_by_space(inpString: str):
+    '''
+    Definition: This will take a string as the input, and will break it up by white space.
+
+    Parameters:
+    inpString-> a string 
+
+    Returns:
+    a list that has been seperated by whitespace by the inpString
+    '''
+    newList = inpString.split(" ")
+    return newList
