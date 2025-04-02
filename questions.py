@@ -232,4 +232,24 @@ def execute_q11():
             div_by_5.append(bin(item)[2:])
     print(div_by_5)
 
-execute_q11()
+#execute_q11()
+
+"""
+Level 2
+
+Question: Write a program, which will find all such numbers between 1000 and 3000 (both included) such that each digit of the number is an even number. 
+The numbers obtained should be printed in a comma-separated sequence on a single line.
+
+Hints: In case of input data being supplied to the question, it should be assumed to be a console input.
+"""
+
+def execute_q12():
+    evens = []
+    for i in range(2001):
+        if not(i % 2):
+            evens.append(i+1000)
+
+    print(evens)
+
+execute_q12()
+
