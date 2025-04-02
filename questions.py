@@ -208,3 +208,28 @@ def execute_q10():
     print(listSplited)
 
 #execute_q10()
+
+"""
+Level 2
+
+Question: Write a program which accepts a sequence of comma separated 4 digit binary numbers as its input and then check whether they are divisible by 5 or not. 
+The numbers that are divisible by 5 are to be printed in a comma separated sequence. 
+Example: 0100,0011,1010,1001 Then the output should be: 1010 Notes: Assume the data is input by console.
+
+Hints: In case of input data being supplied to the question, it should be assumed to be a console input.
+"""
+
+def execute_q11():
+    string_binary = input("Please enter your string of binary numbers, seperated by ,:")
+    split = string_binary.split(",")
+    bin_ints = []
+    for binary in split:
+        bin_ints.append(int(binary,2))
+    div_by_5 = []
+    for item in bin_ints:
+        if not (item % 5):
+            print(item)
+            div_by_5.append(bin(item)[2:])
+    print(div_by_5)
+
+execute_q11()
