@@ -292,4 +292,22 @@ def execute_q14():
             downies += 1
     print(f"UPPER CASE  {downies}  LOWER CASE  {uppies}")
 
-execute_q14()
+#execute_q14()
+
+"""
+Level 2
+
+Question: Write a program that computes the value of a+aa+aaa+aaaa with a given digit as the value of a. 
+Suppose the following input is supplied to the program: 9 Then, the output should be: 11106
+
+Hints: In case of input data being supplied to the question, it should be assumed to be a console input.
+"""
+
+def execute_q15():
+    a = input("Please enter integer to be mathed:")
+    int1 = int(a)
+    int2 = int(a + a)
+    int3 = int(a + a + a)
+    int4 = int(a + a + a + a)
+    print(int1 + int2 + int3 + int4)
+execute_q15()
