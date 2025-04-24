@@ -310,4 +310,49 @@ def execute_q15():
     int3 = int(a + a + a)
     int4 = int(a + a + a + a)
     print(int1 + int2 + int3 + int4)
-execute_q15()
+#execute_q15()
+
+## Skipping to level 3, question 18.
+
+"""
+Question: A website requires the users to input username and password to register. Write a program to check the validity of password input by users. 
+Following are the criteria for checking the password:
+
+At least 1 letter between [a-z]
+At least 1 number between [0-9]
+At least 1 letter between [A-Z]
+At least 1 character from [$#@]
+Minimum length of transaction password: 6
+Maximum length of transaction password: 12 
+Your program should accept a sequence of comma separated passwords and will check them according to the above criteria. 
+Passwords that match the criteria are to be printed, each separated by a comma. 
+Example If the following passwords are given as input to the program: ABd1234@1,a F1#,2w3E*,2We3345 Then, 
+the output of the program should be: ABd1234@1
+Hints: In case of input data being supplied to the question, it should be assumed to be a console input.
+"""
+
+def execute_q18():
+    password = input("Please enter a password: ")
+    accepted = []
+    for passey in password.split(","):
+        if len(passey) < 6 or len(passey) > 12:
+            print("Password must be between 6 and 12 characters")
+            continue
+        if not any(char.islower() for char in passey):
+            print("Password must contain at least one lowercase letter")
+            continue
+        if not any(char.isupper() for char in passey):
+            print("Password must contain at least one uppercase letter")
+            continue
+        if not any(char.isdigit() for char in passey):
+            print("Password must contain at least one digit")
+            continue
+        if " " in passey:
+            print("Password must not contain spaces")
+            continue
+        accepted.append(passey)
+    
+    print("Accepted passwords:")
+    print(','.join(accepted))
+execute_q18()
+
